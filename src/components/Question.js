@@ -14,7 +14,7 @@ function Question({ question, onAnswered }) {
       setTimeRemaining(prevTime => prevTime - 1)
     }, 1000)
       return function cleanup(){
-        clearInterval(timerID)
+        clearTimeout(timerID)
       }
 
   }, [timeRemaining, onAnswered])
